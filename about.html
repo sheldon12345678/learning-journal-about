@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journal - About Me</title>
+    <link rel="stylesheet" href="css/style.css">
+<style>
+    
+/* ==========================================
+   GLOBAL STYLES & RESET
+   ========================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1E1E1E;
+    background-color: #FAFAFA;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* ==========================================
+   HEADER / NAVBAR
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar nav a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.navbar nav a:hover {
+    color: #0E2431;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   ABOUT ME - HERO SECTION
+   ========================================== */
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.about-intro h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.about-intro p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #4B5563;
+    margin: 0;
+}
+
+/* ==========================================
+   ABOUT ME - MAIN BODY CONTENT
+   ========================================== */
+.about-content {
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.about-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 1.25rem;
+}
+
+/* ==========================================
+   RECENT POSTS GRID
+   ========================================== */
+.recent-posts {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.recent-posts h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 600px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.post-date {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6B7280;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.post-card h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #111827;
+}
+
+.post-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4B5563;
+    margin: 0;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background-color: #202020;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+footer .copyright {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    font-weight: 400;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .about-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .about-intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-intro p {
+        font-size: 1rem;
+    }
+}
+</style>
+
+</head>
+<body>
+    
+    
+<!-- Header Section -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="blog-image-08.png" alt="My learning journal logo">
+            <span>My learning journal</span>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT ME</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <img src="avatar.jpg" alt="Roku profile photo" class="avatar">
+            <div class="about-intro">
+                <h1>Hi there! My name is Sheldon Evans and welcome to my learning journal.</h1>
+                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects and meet like-minded peers.</p>
+            </div>
+        </section>
+
+        <!-- Main Content Body -->
+        <section class="about-content">
+            <h2>How I stay committed to learning</h2>
+            <p>I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects.</p>
+            <p>While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world.</p>
+
+            <h2>How I got started</h2>
+            <p>I started simple and gradually grew my learning journal site. I would take notes about what I was learning. After each learning session, I'd use my notes to not only reflect on what I learned but also write short summaries of what I learned using my own words.</p>
+            <p>That helped me grok what I was learning, and I realized that posting my learning summaries was also helping others learn and stay motivated.</p>
+        </section>
+
+        <!-- Recent Posts Grid -->
+        <section class="recent-posts">
+            <h3>Recent posts</h3>
+            <div class="posts-grid">
+                
+                <article class="post-card">
+                    <img src="blog-image-01.png" alt="Laptop on desk with code">
+                    <span class="post-date">JULY 23, 2022</span>
+                    <h2>Blog one</h2>
+                    <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="blog-image-02.png" alt="Lightbulb hands">
+                    <span class="post-date">JULY 23, 2022</span>
+                    <h2>Blog two</h2>
+                    <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="blog-image-03.png" alt="Abstract gradient graphic">
+                    <span class="post-date">JULY 23, 2022</span>
+                    <h2>Blog three</h2>
+                    <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="blog-image-04.png" alt="Girl sitting on beach looking at sunset">
+                    <span class="post-date">JULY 23, 2022</span>
+                    <h2>Blog four</h2>
+                    <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="blog-image-05.png" alt="Code on screen">
+                    <span class="post-date">JULY 23, 2022</span>
+                    <h2>Blog five</h2>
+                    <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="blog-image-06.png" alt="Laptop displaying web design">
+                    <span class="post-date">JULY 23, 2022</span>
+                    <h2>Blog six</h2>
+                    <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>My Learning Journal</p>
+        <p class="copyright">Copyright ©2022</p>
+    </footer>
+</body>
+</html>
+
+    
